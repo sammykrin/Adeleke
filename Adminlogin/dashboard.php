@@ -10,7 +10,7 @@
 	<script type="text/javascript">
 		new WOW().init();
 	</script>
-	<title>Welcome</title>
+	<title>Admin~Dashborad</title>
 	<style>
 	@font-face
 		{
@@ -25,7 +25,7 @@
 		    width: 240px;
 		    position:fixed;
 		    z-index: 1;
-		    /*top: 39px;*/
+		    top: 39px;
 		    left: 0;
 		    background-color:#343A40 ;
 		    overflow-x: hidden; 
@@ -78,17 +78,11 @@
 
 		}
 
-		/*.dropbtn
-		{
-		    background-color: #4CAF50;
-		    color: white;
-		    padding: 16px;
-		    font-size: 16px;
-		    border: none;
-		    cursor: pointer;
-
+		nav{
+			width: 100%;			
+			height: 45px;
+			background-color: #000;
 		}
-*/
 		.dropdown
 		{
 		    position: relative;
@@ -133,7 +127,7 @@
 		<ul class="nav">
 			<li><img src="img/AU.jpg" style="width: 5%;margin-left:10%;margin-top: 1%"><span style="color: white;"> Adeleke Uni</span></li>
 			<!-- <li class="nav-item"><a href="#!contact" class="nav-link">Contact Us</a></li> -->
-			<div  style='margin-left: 39%'><li class="nav-item"><a href="#!mails" class="nav-link"><span class="fa fa-envelope" ></span></a></li></div>
+			<div  style='margin-left: 35%'><li class="nav-item"><a href="#!mails" class="nav-link"><span class="fa fa-envelope" ></span></a></li></div>
 			<li class="nav-item"><a href="#!notification" class="nav-link nav-brand"><span class="fa fa-bell"></span></a></li>
 			<li class="nav-item"><a href="http://localhost/adeleke/Adminlogin/index.php" class="nav-link"><span class="fa fa-user"></span></a></li>
 			
@@ -146,8 +140,8 @@
 			 <div class="dropdown">
   			<a href="#!"><span id="fa" class="fa fa-edit fa-sm"></span><span  id="sama"></span>Edit_Student</a>
 						  <div class="dropdown-content">
-						    <a href="http://localhost/class/php/custolist.php">Male </a>
-						    <a href="http://localhost/class/php/custolist.php">Female </a>
+						    <a href="http://localhost/Adeleke/Adminlogin/.php">Male </a>
+						    <a href="http://localhost/adeleke/Adminlogin/.php">Female </a>
 					 	  </div>
 						</div>
 			 <a href="http://localhost/adeleke/Adminlogin/come.php"><span id="fa" class="fa fa-users fa-sm"></span><span id="sameee" > Students_Info</span></a>

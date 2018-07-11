@@ -12,6 +12,7 @@ $email = $_POST['Email_Address'];
 $student = $_POST['Student_Phone_No'];
 $parent = $_POST['Parent_Phone_No'];
 
+
 $update = mysqli_query($con, "UPDATE student_info_db SET Name='$name',Course = '$course',Matric_No= '$matircno',D_O_B = '$dob',Religion_Denomination='$religion',Home_Address='$home',Email_Address='$email',Student_Phone_No='$student',Parent_Phone_No='$parent' WHERE student_info = '$id'");
 if($update){
 	include("come.php");
@@ -27,7 +28,7 @@ while($row=mysqli_fetch_array($select)){
  ?>
  
 		<html>
-		<head><tittle></tittle></head>
+		<head><tittle>Edit</tittle></head>
 		<body>
 		<form action="edit.php" method="post">
 			<input type="text" name="id" value= <?php echo $row['student_info']; ?> hidden="hidden">
@@ -57,6 +58,7 @@ while($row=mysqli_fetch_array($select)){
 
 							<label>Parent_Phone_No:</label>
 							<input type="text" name="Parent_Phone_No"  required="true" value= <?php echo $row['Parent_Phone_No'];  ?> ><br>
+									
 							<button class="btn btn-sm" name="sub" type="submit">Update</button>
 
 			

@@ -6,7 +6,7 @@ $result=mysqli_query($con,"select * from Admin_db where mail= '$mail' and passwo
 $tell=true;
 while ($row=mysqli_fetch_array($result)) 
 	{
-		echo "Welcome"." ".$row['name']." "."You are now logged in";
+		// echo "Welcome"." ".$row['name']." "."You are now logged in";
 		include 'dashboard.php';
 		$tell=false;
 	}
