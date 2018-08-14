@@ -8,8 +8,33 @@ $show=mysqli_query($con,"select * from student_info_db");
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Students~Info</title>
-	<meta charset="utf-8">
+	<title>Students-Info</title>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+ 
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- toast CSS -->
+    <link href="plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- morris CSS -->
+    <link href="plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <!-- chartist CSS -->
+    <link href="plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="css/colors/default.css" id="theme" rel="stylesheet
+
+	
 	<meta name="viewport" content="width=device-width initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
 	<link rel="stylesheet" type="text/css" href="wowjs/css/libs/animate.css">
@@ -18,56 +43,7 @@ $show=mysqli_query($con,"select * from student_info_db");
 		new WOW().init();
 	</script>
 	<style>
-	.bg{
-			background-image: url('img/come.jpg');
-			width: auto;
-			height: 100vh;
-			background-size: cover;
-			background-repeat: no-repeat;
-			color: #fff;	 
-			background-attachment:fixed;
-			font-family: Bellefair-Regular;
-			font-size: 25px; 
-		}
-	.sidenav 
-		{
-			height: 1000px;
-			width: 240px;
-			position:fixed;
-			z-index: 1;
-			/*top: 39px;*/
-			left: 0;
-			background-color:#343A40 ;
-			overflow-x: hidden; 
-			transition: 0.5s;
-			padding-top: 60px;
-
-		}
-
-		.sidenav a 
-		{
-			padding: 8px 8px 8px 32px;
-			font-size: 25px;
-			 color: #fff;
-			display: block;
-			transition: 0.3s;
-		}
-
-		.sidenav a:hover 
-		{
-		   background-color: #FC5042;
-					color: white;
-					transition: 2s;
-		}
-
-		.sidenav .closebtn 
-		{
-			position: absolute;
-			top: 0;
-			right: 25px;
-			font-size: 36px;
-			margin-left: 50px;
-		}
+	
 		#main .buy {display: flex;justify-content: space-around;}
 
 		#main 
@@ -75,95 +51,118 @@ $show=mysqli_query($con,"select * from student_info_db");
 			transition: margin-left .5s;margin-left: 250px;
 			padding-top: 20px
 		}
+		img
+		{
+			width: 5%;
+			margin-right:230px;
+			padding-top: 8px;
+		}
 		
-		nav a{color: white;padding-left: 10px;padding: 5px}
-
-		@media screen and (max-height: 450px) 
-		{
-		  .sidenav {padding-top: 15px;}
-		  .sidenav a {font-size: 18px;}
-		}
-		nav{
-			width: 100%;			
-			height: 45px;
-			background-color: #000;
-			position: fixed;
-		}
-
-		.dropdown
-		{
-			position: relative;
-			display: inline-block;
-		}
-
-		.dropdown-content 
-		{
-			display: none;
-			position: absolute;
-			background-color: #f9f9f9;
-			min-width: 230px;
-			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		}
-
-		.dropdown-content a 
-		{
-			color: black;
-			padding: 12px 16px;
-			text-decoration: none;
-			display: block;
-		}
-
-		.dropdown:hover .dropdown-content 
-		{
-			display: block;
-		}
 
 	</style>
 </head>
 <body>
-	<nav class="bg-dark">
-		<ul class="nav">
-			<li><img src="img/AU.jpg" style="width: 5%;margin-left:10%;margin-top: 1%"><span style="color: white;"> Adeleke Uni</span></li>
-			<!-- <li class="nav-item"><a href="#!contact" class="nav-link">Contact Us</a></li> -->
-			<div  style='margin-left: 35%'><li class="nav-item"><a href="#!mails" class="nav-link"><span class="fa fa-envelope" ></span></a></li></div>
-			<li class="nav-item"><a href="#!notification" class="nav-link nav-brand"><span class="fa fa-bell"></span></a></li>
-			<li class="nav-item"><a href="http://localhost/adeleke/Adminlogin/index.php" class="nav-link"><span class="fa fa-user"></span></a></li>
-			
-		</ul>
-	</nav>
-	
-	 <div id="mySidenav" class="sidenav">
-			  <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa fa-bars"></i></a -->
-			 <a href="http://localhost/adeleke/Adminlogin/dashboard.php" style="text-decoration:none;">Dashboard</a>
-			 <a href="http://localhost/class/php/custolist.php" style="text-decoration:none;">Add Hostel</a>
-			  <div class="dropdown">
-			<a href="#!" style="text-decoration: none;"><span id="fa" class="fa fa-edit"></span><span  id="sama"></span> Edit Student</a>
-						  <div class="dropdown-content">
-							<a href="http://localhost/class/php/custolist.php" style="text-decoration: none;" name="male">Male </a>
-							<a href="http://localhost/class/php/custolist.php" style="text-decoration: none;" name="female">Female </a>
-						  </div>
-						</div>
-			 <a href="http://localhost/adeleke/Adminlogin/come.php" style="text-decoration:none;"><span class="fa fa-users"> Students_Info</span></a>
-			 
-			</div>
-<div id="main" class="wow slideInRight">
+<nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header">
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                	<li><img src="img/AU.jpg"></li>
 
-<?php
-echo "<table class='table table-bordered table-striped mt-5'>";
-echo "<tr><th>Name</th><th>Course</th><th>Matric-No</th><th>level</th><th>Email-Address</th><th>gender</th><th>More-Details</th></tr>";
-while ($shows=mysqli_fetch_array($show)) {
-	$id=$shows['student_info'];
-	echo "<tr><td>".$shows['Name']."</td><td>".$shows['Course']."</td><td>".$shows['Matric_No']."</td><td>".$shows['Level']."</td><td>".$shows['Email_Address']."</td><td>".$shows['gender']."</td><td><button class='btn btn-sm btn-info'><a style='text-decoration:none;color:white;' href='more.php?id=$id'>More</button></td></tr>";
-}
-echo "</table>";
-?>
+                    <li>
+                        <form>
+                            <div role="search" class="app-search hidden-sm hidden-xs m-r-11 mb-2"><input type="text" placeholder="Search..."  name="input" class="form-control" id="f"> <a href=""><i class="fa fa-search" onclick="get(this.value)"></i></a></div> </form>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+
+
+
+	<div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav slimscrollsidebar">
+                <div class="sidebar-head">
+                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu"><b>INFO</b></span></h3>
+                </div>
+                <ul class="nav" id="side-menu">
+                    <li style="padding: 70px 0 0;">
+                        <a href="http://localhost/adeleke/Adminlogin/dashboard.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-clock-o" aria-hidden="true"></i> Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="http://localhost/class/php/custolist.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+                    </li>
+                   
+                    <li>
+                        <a href="http://localhost/adeleke/Adminlogin/About.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-font" aria-hidden="true"></i> About</a>
+                    </li>
+
+                    <li>
+                        <a href="http://localhost/adeleke/Adminlogin/come.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-globe " aria-hidden="true"></i> Student-info</a>
+                    </li>
+
+                    <li>
+                        <a href="http://localhost/adeleke/Adminlogin/404.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-info-circle " aria-hidden="true"></i> Error 404</a>
+                    </li>
+
+                </ul>
+                
+            </div>
+            
+        </div>
+
+
+
+
+<!-- <div id="page-wrapper"> -->
+	<div class="col-md-12">
+		<div id="main" class="wow pulse">
+					<table class='table table-bordered table-striped mt-2'>
+						<thead>
+						
+							<th>Name</th>
+							<th>Course</th>
+							<th>Matric-No</th>
+							<th>Level</th>
+							<th>Email-Address</th>
+							<th>Gender</th>
+							<th>More-Details</th>
+					
+					</thead>
+							<tbody>
+								
+							</tbody>
+					</table>
+				
+				</div>
+			
+
+
 
 </div>
+<!-- </div> -->
+
+
+<script>
+		function get()
+		{
+			var put='';
+			var ins=f.value;
+          $.post("json.php",{input:ins},function(take){all=JSON.parse(take);
+            for(i=0;i<all.length;i++){
+            	ids=all[i].student_info;
+            	put+="<tr><td>"+all[i].Name+"</td><td>"+all[i].Course+"</td><td>"+all[i].Matric_No+"</td><td>"+all[i].Level+"</td><td>"+all[i].Email_Address+"</td><td>"+all[i].gender+"</td><td><button class='btn btn-sm btn-info'><a style='text-decoration:none;color:white;' href='more.php?id="+ids+"'>More</button></td></tr>";
+            }
+            $('tbody').html(put);
+          });
+          
+		}
+	</script>
+</body>
 <link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
 <script type="text/javascript" src="bootstrap4/js/jquery-3.2.1.js"></script>
 	<script type="text/javascript" src="bootstrap4/js/popper.js"></script>
 	<script type="text/javascript" src="bootstrap4/js/bootstrap.js"></script>
-</body>
+	
 </html>
 <?php
 // echo "$id";

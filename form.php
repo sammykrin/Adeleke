@@ -95,69 +95,75 @@
   oninput="this.className = ''">male</p>
    <p><input type="radio" name="radio" value="female"
   oninput="this.className = ''">female</p>
-</div>
 
-<div class="tab">
-	<label>Choose-Hostel</label>
-		<select>
-			<option>male</option>
-			<option>female</option>
-		</select>
+
+  <label>Choose-Hostel</label>
+		<select oninput="this.className = ''" name="hostel" required="true">
+			<option value="Samuel Hostel">Samuel</option>
+			<option value="Biosla Hostel">Bisola</option>
+		</select><br>
 		<label>Room-Tags</label>
-										<select>
-											<option>A~BLOCK</option>
-											<option>B~BLOCK</option>
-											<option>C~BLOCK</option>
-											<option>D~BLOCK</option>
-											<option>E~BLOCK</option>
-											<option>F~BLOCK</option>
-											<option>G~BLOCK</option>
-											<option>H~BLOCK</option>
-											<option>I~BLOCK</option>
+										<select oninput="this.className = ''" name="room" required="true">
+											<option value="A~BLOCK">A~BLOCK</option>
+											<option value="B~BLOCK">B~BLOCK</option>
+											<option value="C~BLOCK">C~BLOCK</option>
+											<option value="D~BLOCK">D~BLOCK</option>
+											<option value="E~BLOCK">E~BLOCK</option>
+											<option value="F~BLOCK">F~BLOCK</option>
+											<option value="G~BLOCK">G~BLOCK</option>
+											<option value="H~BLOCK">H~BLOCK</option>
+											<option value="I~BLOCK">I~BLOCK</option>
 										</select><br>
 
+
 										<label>Room-NO</label>
-										<select>
-											<option>1</option>
-											<option>2</option>
-											<option>3</option>
-											<option>4</option>
-											<option>5</option>
-											<option>6</option>
-											<option>7</option>
-											<option>8</option>
-											<option>9</option>
-											<option>10</option>
-											<option>11</option>
-											<option>12</option>
-											<option>13</option>
-											<option>14</option>
-											<option>15</option>
-											<option>16</option>
-											<option>17</option>
-											<option>18</option>
-											<option>19</option>
-											<option>20</option>
-											<option>21</option>
-											<option>22</option>
+										<select oninput="this.className = ''" name="roomnos" required="true">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+											<option value="6">6</option>
+											<option value="7">7</option>
+											<option value="8">8</option>
+											<option value="9">9</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+											<option value="19">19</option>
+											<option value="20">20</option>
+											<option value="21">21</option>
+											<option value="22">22</option>
+										</select><br>
+
+										<label>Bulk</label>
+										<select oninput="this.className = ''" name="bulk" required="true">
+											<option value="Bulk-1">Bulk-1</option>
+											<option value="Bulk-2">Bulk-2</option>
+											<option value="Bulk-3">Bulk-3</option>
 										</select>
 
 										<label>Bed-Type</label>
-										<select>
-											<option>Upper-Bed 1</option>
-											<option>Lower-Bed 1</option>
-											<option>Upper-Bed 2</option>
-											<option>Lower-Bed 2</option>
-											<option>Upper-Bed 3</option>
-											<option>Lower-Bed 3</option>
+										<select oninput="this.className = ''" name="bed" required="true">
+											<option value="Upper-Bed 1">Upper-Bed 1</option>
+											<option value="Lower-Bed 1">Lower-Bed 1</option>
+											<option value="Upper-Bed 2">Upper-Bed 2</option>
+											<option value="Lower-Bed 2">Lower-Bed 2</option>
+											<option value="Upper-Bed 3">Upper-Bed 3</option>
+											<option value="Lower-Bed 3">Lower-Bed 3</option>
 										</select>
-											
 
-	<!-- <p><input  oninput="this.className = ''"></p>
-	<p><input  oninput="this.className = ''"></p> -->
-	
+
 </div>
 
+
+	
 <div style="overflow:auto;">
   <div style="float:right;">
     <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
@@ -166,13 +172,13 @@
 </div>
 <!-- <button class="btn btn-sm" type="submit">Allocate</button> -->
 
-<!-- Circles which indicates the steps of the form: -->
+
 <div style="text-align:center;margin-top:40px;">
   <span class="step"></span>
   <span class="step"></span>
   <span class="step"></span>
   <span class="step"></span>
-  <span class="step"></span>
+  <!-- <span class="step"></span> -->
 </div>
 
 </form>
@@ -236,6 +242,7 @@ function validateForm() {
   }
   if (valid) {
     document.getElementsByClassName("step")[currentTab].className += " finish";
+    
   }
   return valid;
 }
@@ -247,5 +254,6 @@ function fixStepIndicator(n) {
   }
   x[n].className += " active";
 }
+
 </script>
 </html>

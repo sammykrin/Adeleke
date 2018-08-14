@@ -12,7 +12,7 @@ $tell=true;
 	}
 	if ($tell)
 	{
-		$msg="Incorrect user name or password";
+		$msg="Incorrect user Matric no or Password";
 		include 'index.php';
 		// echo "Incorrect";
 	}

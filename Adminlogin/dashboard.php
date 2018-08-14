@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
-	<meta charset="utf-8">
+<meta charset="utf-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png"> -->
+    <title>Welcome</title>
+    <!-- Bootstrap Core CSS -->
 	<meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+    <link href="bootstrap4/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- toast CSS -->
+    <link href="plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- morris CSS -->
+    <link href="plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <!-- chartist CSS -->
+    <link href="plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
+    <link href="plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="css/colors/default.css" id="theme" rel="stylesheet">
+    
 	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
 	<link rel="stylesheet" type="text/css" href="wowjs/css/libs/animate.css">
 	<script type="text/javascript" src="wowjs/dist/wow.min.js"></script>
 	<script type="text/javascript">
 		new WOW().init();
 	</script>
-	<title>Admin~Dashborad</title>
 	<style>
 	@font-face
 		{
@@ -19,103 +42,25 @@
 			src:url('google-font/bellefair-Regular.ttf') format('ttf');
 			src:url('google-font/bellefair-Regular.ttf') format('truetype');
 		}
-		.sidenav 
-		{
-		    height: 1000px;
-		    width: 240px;
-		    position:fixed;
-		    z-index: 1;
-		    top: 39px;
-		    left: 0;
-		    background-color:#343A40 ;
-		    overflow-x: hidden; 
-		    transition: 0.5s;
-		    padding-top: 60px;
-
-        }
-
-		.sidenav a 
-		{
-		    padding: 8px 8px 8px 32px;
-		    text-decoration: none;
-		    font-size: 25px;
-		     color: #fff;
-		    display: block;
-		    transition: 0.3s;
-        }
-
-		.sidenav a:hover 
-		{
-		   background-color: #FC5042;
-				    color: white;
-				    transition: 2s;
-		}
-
-		.sidenav .closebtn 
-		{
-		    position: absolute;
-		    top: 0;
-		    right: 10px;
-		    font-size: 36px;
-		    margin-left: 50px;
-		}
-		#main .buy {display: flex;justify-content: space-around;}
-
+		
+		
 		#main 
 		{
 		    transition: margin-left .5s;margin-left: 240px;
 		}
-		nav a{color: white;padding-left: 10px;padding: 5px}
-
-		@media screen and (max-height: 450px) 
-		{
-		  .sidenav {padding-top: 15px;}
-		  .sidenav a {font-size: 18px;}
+		
+		nav div ul li a:hover{
+			color: #F9A026;
+			transition:2s
 		}
-		.sidenav .openbtn{
-			position: relative;
-			margin-right: 60;
-
+		img{
+			width: 5%;
+			margin-right:230px;
+			padding-top: 10px;
 		}
-
 		nav{
-			width: 100%;			
-			height: 45px;
-			background-color: #000;
+			position:static-top;
 		}
-		.dropdown
-		{
-		    position: relative;
-		    display: inline-block;
-		}
-
-		.dropdown-content 
-		{
-		    display: none;
-		    position: absolute;
-		    background-color: #f9f9f9;
-		    min-width: 230px;
-		    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-		}
-
-		.dropdown-content a 
-		{
-		    color: black;
-		    padding: 12px 16px;
-		    text-decoration: none;
-		    display: block;
-		}
-
-		.dropdown:hover .dropdown-content 
-		{
-    		display: block;
-		}
-
-		/*.dropdown:hover .dropbtn 
-		{
-    		background-color: #343A40;
-		}
-*/				
 	</style>
 
 
@@ -123,90 +68,123 @@
 
 
 <body>
-	<nav class="bg-dark">
-		<ul class="nav">
-			<li><img src="img/AU.jpg" style="width: 5%;margin-left:10%;margin-top: 1%"><span style="color: white;"> Adeleke Uni</span></li>
-			<!-- <li class="nav-item"><a href="#!contact" class="nav-link">Contact Us</a></li> -->
-			<div  style='margin-left: 35%'><li class="nav-item"><a href="#!mails" class="nav-link"><span class="fa fa-envelope" ></span></a></li></div>
-			<li class="nav-item"><a href="#!notification" class="nav-link nav-brand"><span class="fa fa-bell"></span></a></li>
-			<li class="nav-item"><a href="http://localhost/adeleke/Adminlogin/index.php" class="nav-link"><span class="fa fa-user"></span></a></li>
-			
-		</ul>
-	</nav>
- <div id="mySidenav" class="sidenav">
-			  <a href="javascript:void(0)" class="closebtn" onclick="bar()"><i id="bars" class="fa fa-bars"></i></a>	
-			 <a id="same" href="http://localhost/adeleke/Adminlogin/dashboard.php"><span class="fa fa-dashboard">Dashboard</span></a>
-			 <a href="http://localhost/class/php/custolist.php"><span id="fa" class="fa fa-user-plus fa-sm"></span><span id="samee"> Add_hotsel</span></a>
-			 <div class="dropdown">
-  			<a href="#!"><span id="fa" class="fa fa-edit fa-sm"></span><span  id="sama"></span>Edit_Student</a>
-						  <div class="dropdown-content">
-						    <a href="http://localhost/Adeleke/Adminlogin/.php">Male </a>
-						    <a href="http://localhost/adeleke/Adminlogin/.php">Female </a>
-					 	  </div>
-						</div>
-			 <a href="http://localhost/adeleke/Adminlogin/come.php"><span id="fa" class="fa fa-users fa-sm"></span><span id="sameee" > Students_Info</span></a>
-			 
-			</div>
-			<div id="main">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 mt-2">
-						<div class="wow fadeInUpBig" class="img-fluid" width="180" style="margin-left: 6%">
-							<img src="img/dash1.jpg" class="img-fluid" width="180" style="margin-left: 6%">
-							<img src="img/dash2.jpg" class="img-fluid" width="180" style="margin-left: 6%">
-							<img src="img/dash3.jpg" class="img-fluid" width="180" style="margin-left: 6%">
-							<img src="img/dash4.jpg" class="img-fluid" width="180" style="margin-left: 6%">
+<nav class="navbar navbar-default m-b-0">
+            <div class="navbar-header">
+                
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                	<li><img src="img/AU.jpg"></li>
+                	<li class="nav-item"><a href="#!mails" class="nav-link"><span class="fa fa-envelope" id="me"></span></a></li>
+                	<li class="nav-item"><a href="#!notification" class="nav-link nav-brand"><span class="fa fa-bell" id="me"></span></a></li>
+                    <li class="nav-item"><a href="http://localhost/adeleke/Adminlogin/index.php" class="nav-link"><span class="fa fa-sign-out-alt" id="me"> Logout</span></a></li>
+                       
+                    
+                </ul>
+            </div>
+        </nav>
+
+
+
+	<div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav slimscrollsidebar">
+                <div class="sidebar-head">
+                    <h1 style="font-size: 30px;font-weight: bold;">WELCOME<span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu"></span></h1>
+                </div>
+                <ul class="nav" id="side-menu">
+                    <li style="padding: 70px 0 0;">
+                        <a href="http://localhost/adeleke/Adminlogin/dashboard.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-clock-o" aria-hidden="true"></i> Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="http://localhost/class/php/custolist.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+                    </li>
+                   
+                    <li>
+                        <a href="http://localhost/adeleke/Adminlogin/About.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-font" aria-hidden="true"></i> About</a>
+                    </li>
+
+                    <li>
+                        <a href="http://localhost/adeleke/Adminlogin/come.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-globe " aria-hidden="true"></i> Student-info</a>
+                    </li>
+
+                    <li>
+                        <a href="http://localhost/adeleke/Adminlogin/404.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-info-circle " aria-hidden="true"></i> Error 404</a>
+                    </li>
+
+                </ul>
+                
+            </div>
+            
+        </div>
+
+	<div id="page-wrapper">
+
+				<div class="container-fluid">
+				<div class="row big-title">
+					<div class="col-lg-4 col-sm-6 col-xs-12 mt-3">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Total Visit</h3>
+                            <ul class="list-inline two-part">
+                                <li>
+                                    <div id="sparklinedash"></div>
+                                </li>
+                                <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success">659</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6 col-xs-12 mt-3">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Total Page Views</h3>
+                            <ul class="list-inline two-part">
+                                <li>
+                                    <div id="sparklinedash2"></div>
+                                </li>
+                                <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple">869</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-sm-6 col-xs-12 mt-3">
+                        <div class="white-box analytics-info">
+                            <h3 class="box-title">Unique Visitor</h3>
+                            <ul class="list-inline two-part">
+                                <li>
+                                    <div id="sparklinedash3"></div>
+                                </li>
+                                <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info">911</span></li>
+                            </ul>
+                        </div>
+                    </div>
+					
+
+
+						
 						</div>
 
-						</div>
+						<div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="white-box">
+                            <h3 class="box-title">Students Yearly Report</h3>
+                            <ul class="list-inline text-right">
+                                <li>
+                                    <h5><i class="fa fa-circle m-r-5 text-info"></i>2017</h5> </li>
+                                <li>
+                                    <h5><i class="fa fa-circle m-r-5 text-inverse"></i>2013</h5> </li>
+                            </ul>
+                            <div id="ct-visits" style="height: 405px;"></div>
+                        </div>
+                    </div>
+                </div>
 						
 					</div>
-					<div class="row">
-						<div class="col-md-12 mt-4">
-							<div class="wow rollIn">
-								<img src="img/dash.jpg" class="img-fluid" style="margin-left: 11%">
-								<img src="img/dasssa.png" class="img-fluid" width="480">
-							</div>
-							
-						</div>
-						
-					</div>
-					
-				</div>
-			</div>
+				 </div>
+            <!-- /.container-fluid -->
+            <footer class="footer text-center"> 2018 &copy; Olamilehin Admin brought to you by wrappixel.com </footer>
+        </div>
 				
-			
+	</div>
 </body>
-<script>
-	bars=false;
-	function bar()
-	{
-	  if (bars==false) {
-	  	document.getElementById("mySidenav").style.width="70px";
-		document.getElementById("same").style.marginLeft="70px";
-		document.getElementById("sama").style.marginLeft="70px";
-		document.getElementById("samee").style.marginLeft="70px";
-		document.getElementById("sameee").style.marginLeft="70px";
-		document.getElementById("fa").style.marginLeft="0px";
-		document.getElementById("bars").style.paddingLeft="5px";
-		document.getElementById("main").style.marginLeft="0px";
-		bars=true;
-	  }	
-		
-		else{
-		document.getElementById("mySidenav").style.width="240px";
-		document.getElementById("same").style.marginLeft="0px";
-		document.getElementById("sama").style.marginLeft="0px";
-		document.getElementById("samee").style.marginLeft="0px";
-		document.getElementById("sameee").style.marginLeft="0px";
-		document.getElementById("fa").style.marginLeft="0px";
-		document.getElementById("bars").style.paddingLeft="5px";
-		document.getElementById("main").style.marginLeft="0px";
-		 bars=false;
-		}
-		
-	}
-</script>
+
 <script type="text/javascript" src="bootstrap4/js/jquery-3.2.1.js"></script>
 	<script type="text/javascript" src="bootstrap4/js/popper.js"></script>
 	<script type="text/javascript" src="bootstrap4/js/bootstrap.js"></script>

@@ -15,60 +15,132 @@
 			src:url('google-font/bellefair-Regular.ttf') format('ttf');
 			src:url('google-font/bellefair-Regular.ttf') format('truetype');
 		}
-		#bg{
-			background-image: url("img/skul1.jpg");
-			width: auto;
-			height: 120vh;
-			background-size: cover;
-			background-repeat: no-repeat;
-			color: #fff;	 
-			background-attachment:fixed;
-			font-family: Bellefair-Regular;
-			font-size: 25px; 
+
+		body{
+			margin: 0;
+			padding: 0;
+			background-color: #fafafa;
 		}
-		#card{
-			opacity: 0.7;
-			filter: alpha(opacity=710);
-			background-color: transparent;
+		#container{
+			display: flex;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
 		}
+		#area{
+			width: 30%;
+			height: 80vh;
+			background-color: #fff;
+			box-shadow: 0 0 10px #ccc;
+			border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+		
+		#img-div,#form-div{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		#img-div{
+			background-color: #0078D7;
+			height: 60%;
+			border-bottom: 1px solid grey;
+			border-top-right-radius: 10px;
+			border-top-left-radius: 10px;
+		}
+		#form-div{
+			padding-top: 70px;
+		}
+		form{
+                 width:90%; 
+		}
+		img{
+			width: 110px;
+			height: 100px;
+			border-radius: 50%; 
+			position: relative;
+			top: 58%;
+			/*align-self: center;*/
+			/*border: 3px solid #8d0b0b;*/
+		}
+		input{
+			width: 100%;
+			margin-bottom: 25px;
+			padding-top: 6px;
+			padding-bottom: 6px;
+			border-radius: 6px;
+			border: 2px solid #ccc;*/
+
+		}
+		button{
+			margin-left: 39%;
+			padding: 12px 30px;
+			background-color: #0078D7;
+			color: #000;
+			border: 1px solid #fff;
+			transition: background-color 1s;
+			border-radius: 19px;
+		}
+		button:hover{
+			background-color: #fff;
+			border:3px solid #0078D7;
+			color: #777;
+			cursor: pointer;
+
+		}
+		@media only screen and (max-width: 400px){
+			img{
+				width: 80px;
+				height: 80px;
+				padding-top: 20px;
+							}
+			button{
+				width: 95px;
+				height: 50px;
+				padding-left:18px ;
+				margin-left: 0px;
+			}
+			area{
+				height: 100%;
+				width: 100%;
+			}
+
+		}
+		
 	</style>
 </head>
 <body>
 
-
-	<div class="container">
-		<div id="bg">
-		<div class="row">
-			<div class="col-md-12 mt-3">
-				<p style="color: #272822; font-size: 30px;" align="center">Login to your Account</p>
-				<div align="center"><span class="fa fa-lock fa-4x" style="font-weight: bold;color: #272822"></span></div>
-				
-			</div>
-			
-		</div>
-		<div clas="row" id="card">
-			<div class="col-md-12 mt-3" align="center">
-				<div class="card" style="width: 50%; margin-bottom: 30px;" >
-					<div class="card-body">
-						<form class="form" action="indexlogin.php" method="post">
-							<font color="red"><?php
+					<div id="container">
+		<div id="area">
+		<div id="img-div">
+         <img src="img/sku2.jpg" alt="image">
+     </div>
+     <div id="form-div">
+         <form class="form" action="indexlogin.php" method="post">
+         	<font color="red"><?php
                                if (isset($msg)) {
                                	echo $msg;
                                }
 							?></font>
-							<div class="col-md-12">
+         	<div class="col-md-12">
 								<div class="form-group">
 									<label for="name" style="color: #000000">Matric No</label>
 									<div class="input-group">
 								<span class="input-group-addon">
 									<span class="fa fa-edit"></span>											
 								</span>
-						<input type="text" class="form-control" required="true" name="Matricno">
+						<input type="text" class="form-control" required="true" name="Matricno" id="mat">
 					</div>
 				</div>
 			</div>
+         	
 
-			<div class="col-md-12">
+         	<div class="col-md-12">
 								<div class="form-group">
 									<label for="name" style="color: #000000">Password</label>
 									<div class="input-group">
@@ -79,25 +151,18 @@
 									</div>
 								</div>
 							</div>
- 						<br>
-						<div><input type="submit" name="" value="Login" style="width: 100%;background-color: #6D7E92"></div>
-						<div style="font-size: 12px;color: #000000"><b>Note</b>: Your default password is your username in lowercase</div>
-						<div style="color: #000000"><input type="checkbox" name="" >Remember me</div>
-						<div><a href="reg.php" style="text-decoration: none;">SignUp</a></div>
-						
-						</form>
-						
-					</div>
-	
-				</div>
-				
-				
-			</div>
+ 						
+						<div><!-- <input type="submit" name="" value="Login" style="width: 100%;background-color: #6D7E92"> --><button class="btn btn-sm" value="submit" name="">login</button></div>
+						<div style="font-size: 14px;color: #000000"><b>Note</b>: Your default password is your username in lowercase</div>
+						<div><a href="reg.php" style="text-decoration: none;margin-left: 35%;font-size: 20px;margin-bottom: 20px">SignUp</a></div>
+         </form>
+     </div>
 			
 		</div>
-		
 	</div>
-</div>
+
+
+	
 	
 </body>
 <script type="text/javascript" src="bootstrap4/js/jquery-3.2.1.js"></script>
