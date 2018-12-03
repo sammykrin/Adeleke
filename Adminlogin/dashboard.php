@@ -2,12 +2,12 @@
 <html>
 <head>
 <meta charset="utf-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!--  <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png"> -->
-    <title>Welcome</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+ -->    <title>Welcome</title>
     <!-- Bootstrap Core CSS -->
 	<meta name="viewport" content="width=device-width initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
@@ -54,12 +54,9 @@
 			transition:2s
 		}
 		img{
-			width: 5%;
-			margin-right:230px;
-			padding-top: 10px;
-		}
-		nav{
-			position:static-top;
+			width: 4%;
+			margin-right:530px;
+			padding-top: 7px;
 		}
 	</style>
 
@@ -67,14 +64,13 @@
 	   
 
 
-<body>
+<body >
 <nav class="navbar navbar-default m-b-0">
-            <div class="navbar-header">
-                
+            <div class="navbar-header  fixed-top">
                 <ul class="nav navbar-top-links navbar-right pull-right">
                 	<li><img src="img/AU.jpg"></li>
-                	<li class="nav-item"><a href="#!mails" class="nav-link"><span class="fa fa-envelope" id="me"></span></a></li>
-                	<li class="nav-item"><a href="#!notification" class="nav-link nav-brand"><span class="fa fa-bell" id="me"></span></a></li>
+                	<li class="nav-item"><a href="http://localhost/adeleke/Adminlogin/mssg.php" class="nav-link"><span class="fa fa-envelope" id="me"></span></a></li>
+                	<li class="nav-item"><a href="http://localhost/adeleke/Adminlogin/notification.php" class="nav-link nav-brand"><span class="fa fa-bell" id="me"></span></a></li>
                     <li class="nav-item"><a href="http://localhost/adeleke/Adminlogin/index.php" class="nav-link"><span class="fa fa-sign-out-alt" id="me"> Logout</span></a></li>
                        
                     
@@ -87,7 +83,7 @@
 	<div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
                 <div class="sidebar-head">
-                    <h1 style="font-size: 30px;font-weight: bold;">WELCOME<span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu"></span></h1>
+                    <!-- <h1 style="font-size: 30px;font-weight: bold;">WELCOME<span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu"></span></h1> -->
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
@@ -95,7 +91,7 @@
                     </li>
 
                     <li>
-                        <a href="http://localhost/class/php/custolist.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
+                        <a href="http://localhost/adeleke/Adminlogin/Profile.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
                     </li>
                    
                     <li>
@@ -118,43 +114,46 @@
 
 	<div id="page-wrapper">
 
-				<div class="container-fluid">
+				<div class="container-fluid mt-3">
 				<div class="row big-title">
 					<div class="col-lg-4 col-sm-6 col-xs-12 mt-3">
+                        <a href="http://localhost/adeleke/Adminlogin/404.php">
                         <div class="white-box analytics-info">
                             <h3 class="box-title">Total Visit</h3>
                             <ul class="list-inline two-part">
                                 <li>
-                                    <div id="sparklinedash"></div>
+                                    <div><i class="fa fa-users" aria-hidden="true" style="color: #2AA846; font-size:60px;"></i></span></div>
                                 </li>
                                 <li class="text-right"><i class="ti-arrow-up text-success"></i> <span class="counter text-success">659</span></li>
                             </ul>
                         </div>
-                    </div>
+                    </div></a>
 
                     <div class="col-lg-4 col-sm-6 col-xs-12 mt-3">
+                        <a href="http://localhost/adeleke/Adminlogin/404.php">
                         <div class="white-box analytics-info">
                             <h3 class="box-title">Total Page Views</h3>
                             <ul class="list-inline two-part">
                                 <li>
-                                    <div id="sparklinedash2"></div>
+                                    <div><i class="fa fa-street-view" aria-hidden="true" style="color:#707ED9; font-size:60px;"></i></div>
                                 </li>
                                 <li class="text-right"><i class="ti-arrow-up text-purple"></i> <span class="counter text-purple">869</span></li>
                             </ul>
                         </div>
-                    </div>
+                    </div></a>
 
                     <div class="col-lg-4 col-sm-6 col-xs-12 mt-3">
+                        <a href="http://localhost/adeleke/Adminlogin/404.php">
                         <div class="white-box analytics-info">
                             <h3 class="box-title">Unique Visitor</h3>
                             <ul class="list-inline two-part">
                                 <li>
-                                    <div id="sparklinedash3"></div>
+                                    <div><i class="fa fa-male" aria-hidden="true" style="color:#78A2B8; font-size:60px;"></i></div>
                                 </li>
                                 <li class="text-right"><i class="ti-arrow-up text-info"></i> <span class="counter text-info">911</span></li>
                             </ul>
                         </div>
-                    </div>
+                    </div></a>
 					
 
 
@@ -171,7 +170,7 @@
                                 <li>
                                     <h5><i class="fa fa-circle m-r-5 text-inverse"></i>2013</h5> </li>
                             </ul>
-                            <div id="ct-visits" style="height: 405px;"></div>
+                            <div style="height: 405px; font-size: 400px" class="fa fa-chart-pie"></div>
                         </div>
                     </div>
                 </div>
@@ -179,7 +178,7 @@
 					</div>
 				 </div>
             <!-- /.container-fluid -->
-            <footer class="footer text-center"> 2018 &copy; Olamilehin Admin brought to you by wrappixel.com </footer>
+            <footer class="footer text-center"> 2018 &copy; Brought to you by OLAMILEHIN SAMUEL OLAMIDE </footer>
         </div>
 				
 	</div>

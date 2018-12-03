@@ -1,4 +1,4 @@
-<?php
+1<?php
 require 'dbcon.php';
 $mail = $_POST['mail'];
 $password = sha1($_POST['Password']);
@@ -12,7 +12,7 @@ while ($row=mysqli_fetch_array($result))
 	}
 	if ($tell)
 	{
-		$msg="Incorrect user name or password";
+		$msg="Incorrect Mail or password!!!";
 		include 'index.php';
 		// echo "Incorrect user name or password";
 	}

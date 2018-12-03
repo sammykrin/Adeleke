@@ -51,25 +51,26 @@ $show=mysqli_query($con,"select * from student_info_db");
 			transition: margin-left .5s;margin-left: 250px;
 			padding-top: 20px
 		}
-		img
+		/*img
 		{
 			width: 5%;
 			margin-right:230px;
 			padding-top: 8px;
-		}
+			position: static;
+		}*/
 		
-
+ 
 	</style>
 </head>
-<body>
+<body onload="get('')">
 <nav class="navbar navbar-default navbar-static-top m-b-0">
-            <div class="navbar-header">
+            <div class="navbar-header fixed-top">
                 <ul class="nav navbar-top-links navbar-right pull-right">
-                	<li><img src="img/AU.jpg"></li>
+                	<!-- <li><img src="img/AU.jpg"></li> -->
 
                     <li>
                         <form>
-                            <div role="search" class="app-search hidden-sm hidden-xs m-r-11 mb-2"><input type="text" placeholder="Search..."  name="input" class="form-control" id="f"> <a href=""><i class="fa fa-search" onclick="get(this.value)"></i></a></div> </form>
+                            <div role="search" class="app-search hidden-sm hidden-xs m-r-11 mb-3"><input type="text" placeholder="Search..." id="inputs" onkeyup="get(this.value)"  name="input" class="form-control"><a href=""><i class="fa fa-search"></i></a></div> </form>
                     </li>
                     
                 </ul>
@@ -80,9 +81,9 @@ $show=mysqli_query($con,"select * from student_info_db");
 
 	<div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
-                <div class="sidebar-head">
+                <!-- <div class="sidebar-head">
                     <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu"><b>INFO</b></span></h3>
-                </div>
+                </div> -->
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
                         <a href="http://localhost/adeleke/Adminlogin/dashboard.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-clock-o" aria-hidden="true"></i> Dashboard</a>
@@ -114,8 +115,8 @@ $show=mysqli_query($con,"select * from student_info_db");
 
 
 <!-- <div id="page-wrapper"> -->
-	<div class="col-md-12">
-		<div id="main" class="wow pulse">
+	<div class="col-md-12 mt-5">
+		<div id="main">
 					<table class='table table-bordered table-striped mt-2'>
 						<thead>
 						
@@ -140,13 +141,13 @@ $show=mysqli_query($con,"select * from student_info_db");
 
 </div>
 <!-- </div> -->
-
+<!-- <footer class="footer text-center" style="background-color:#EBEFF3"> 2018 &copy; Powered and brought to you by samuel olamilehin </footer> -->
 
 <script>
-		function get()
+		function get(f)
 		{
 			var put='';
-			var ins=f.value;
+			var ins=f;
           $.post("json.php",{input:ins},function(take){all=JSON.parse(take);
             for(i=0;i<all.length;i++){
             	ids=all[i].student_info;
@@ -156,6 +157,17 @@ $show=mysqli_query($con,"select * from student_info_db");
           });
           
 		}
+		// function papi(u)
+		// {
+		// 	var inc=r;
+		// 	$.post("json.php",{input:inc},function(take){all=JSON.parse(take);
+		// 		for(i=0;<all.length;i++){
+		// 			idss=all[i].student_info;
+		// 	put+="<tr><td>"+all[i].Name+"</td><td>"+all[i].Course+"</td><td>"+all[i].Matric_No+"</td><td>"+all[i].Level+"</td><td>"+all[i].Email_Address+"</td><td>"+all[i].gender+"</td><td><button class='btn btn-sm btn-info'><a style='text-decoration:none;color:white;' href='more.php?id="+idss+"'>More</button></td></tr>";
+		// 	 $('tbody').html(put);
+		// 	}	
+  //         });
+		// }
 	</script>
 </body>
 <link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">

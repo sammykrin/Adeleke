@@ -72,7 +72,7 @@
 			margin-bottom: 25px;
 			padding-top: 6px;
 			padding-bottom: 6px;
-			border-radius: 6px;
+			border-radius: 20px;
 			border: 2px solid #ccc;*/
 
 		}
@@ -115,10 +115,10 @@
 </head>
 <body>
 
-					<div id="container">
+<div id="container">
 		<div id="area">
 		<div id="img-div">
-         <img src="img/sku2.jpg" alt="image">
+         <img src="img/AU.jpg" alt="image">
      </div>
      <div id="form-div">
          <form class="form" action="indexlogin.php" method="post">
@@ -153,7 +153,7 @@
 							</div>
  						
 						<div><!-- <input type="submit" name="" value="Login" style="width: 100%;background-color: #6D7E92"> --><button class="btn btn-sm" value="submit" name="">login</button></div>
-						<div style="font-size: 14px;color: #000000"><b>Note</b>: Your default password is your username in lowercase</div>
+						<div style="font-size: 12px;color: #000000"><b>Note</b>: Your default password is your username in lowercase</div>
 						<div><a href="reg.php" style="text-decoration: none;margin-left: 35%;font-size: 20px;margin-bottom: 20px">SignUp</a></div>
          </form>
      </div>
