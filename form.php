@@ -5,6 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+	<link rel="icon" href="./testing/AU.jpg" type="image/png">
+    <link rel="stylesheet" href="./testing/vendor.css">
+    <link rel="stylesheet" href="./testing/app.css">
+    <link href="./testing/sweetalert.css" rel="stylesheet">
 	<title>Welcome</title>
 	<style>
 	#regForm {
