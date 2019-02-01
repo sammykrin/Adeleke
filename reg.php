@@ -102,6 +102,11 @@
 				</div>
 				
 			</div>
+
+			<div class="col-md-6 mt-5">
+				<h1 style="color:#E6BF4D ">Please kindly note that your matric-no and your password is what you gonna need to login<br>SEE YOU GUYS AT THE TOP</h1>
+				
+			</div>
 			
 		</div>
 		
