@@ -1,5 +1,6 @@
-<?php 
+<?php session_start();
 require 'dbcon.php';
+if(isset($_SESSION['user'])){
 $show=mysqli_query($con,"select * from student_info_db");
 // while($stu=mysqli_fetch_array($show)){
 // 	$id = $stu['student_info'];
@@ -32,10 +33,9 @@ $show=mysqli_query($con,"select * from student_info_db");
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     <!-- color CSS -->
-    <link href="css/colors/default.css" id="theme" rel="stylesheet
+    <link href="css/colors/default.css" id="theme" rel="stylesheet">
 
 	
-	<meta name="viewport" content="width=device-width initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
 	<link rel="stylesheet" type="text/css" href="wowjs/css/libs/animate.css">
 	<script type="text/javascript" src="wowjs/dist/wow.min.js"></script>
@@ -177,5 +177,9 @@ $show=mysqli_query($con,"select * from student_info_db");
 	
 </html>
 <?php
-// echo "$id";
- ?>
+}
+else{
+    $msg='Log in here first';
+    include 'index.php';
+}
+?>
