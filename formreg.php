@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 require 'dbcon.php';
 $name = $_POST['Full_Name'];
@@ -55,6 +56,5 @@ else{echo mysqli_error($con);}
 // 	$result=mysqli_query($con,"insert into female_db(Name,Course,Matric_No,Level,D_O_B,Religion_Denomination,Home_Address,Email_Address,Student_Phone_No,Parent_Phone_No,passport,gender)values('$name','$course','$matricno','$level','$dob','$religion','$home','$email','$student','$parent','$passport','$gender')");}
 
 // echo $gender;
-
 
 ?>

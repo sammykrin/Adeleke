@@ -5,6 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+	<link rel="icon" href="./testing/AU.jpg" type="image/png">
+    <link rel="stylesheet" href="./testing/vendor.css">
+    <link rel="stylesheet" href="./testing/app.css">
+    <link href="./testing/sweetalert.css" rel="stylesheet">
 	<title>Welcome</title>
 	<style>
 	#regForm {
@@ -143,10 +147,10 @@
 										</select><br>
 
 										<label>Bulk</label>
-										<select oninput="this.className = ''" name="bulk" required="true">
-											<option value="Bulk-1">Bulk-1</option>
-											<option value="Bulk-2">Bulk-2</option>
-											<option value="Bulk-3">Bulk-3</option>
+										<select oninput="this.className = ''" name="bunk" required="true">
+											<option value="Bunk-1">Bunk-1</option>
+											<option value="Bunk-2">Bunk-2</option>
+											<option value="Bunk-3">Bunk-3</option>
 										</select>
 
 										<label>Bed-Type</label>
@@ -256,4 +260,5 @@ function fixStepIndicator(n) {
 }
 
 </script>
+>>>>>>> f6eba1281ef378c0255f0ce7f08bfbb2ee2cbf08
 </html>
