@@ -1,3 +1,6 @@
+<?php session_start(); 
+if(isset($_SESSION['user'])){
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -211,3 +214,10 @@ echo $rooms[mt_rand(0,sizeof($rooms)-1)];
 							<img src="img/dash3.jpg" class="img-fluid" width="180" style="margin-left: 6%">
 							<img src="img/dash4.jpg" class="img-fluid" width="180" style="margin-left: 6%">
 						</div> -->
+<?php
+}
+else{
+    $msg='Log in here first';
+    include 'index.php';
+}
+?>

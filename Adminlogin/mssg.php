@@ -1,3 +1,6 @@
+<?php session_start(); 
+if(isset($_SESSION['user'])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,8 +35,7 @@
                 <h4 class="text-muted m-t-30 m-b-30">Your InBox Is Empty</h4>
                 <a href="dashboard.php" class="btn btn-danger btn-rounded waves-effect waves-light m-b-40" style="text-decoration: none;">Back to home</a>
             </div>
-            </center>
-            
+            </center>            
             
         </div>
     </section>
@@ -41,3 +43,10 @@
     <script src="bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php
+}
+else{
+    $msg='Log in here first';
+    include 'index.php';
+}
+?>

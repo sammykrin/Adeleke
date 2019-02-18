@@ -1,3 +1,6 @@
+<?php session_start(); 
+if(isset($_SESSION['user'])){
+?>
 <?php
 require 'dbcon.php';
 if(isset($_POST['sub'])){
@@ -68,5 +71,12 @@ while($row=mysqli_fetch_array($select)){
 		<?php
 	}
 }
+}
+?>
+<?php
+}
+else{
+    $msg='Log in here first';
+    include 'index.php';
 }
 ?>

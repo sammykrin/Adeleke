@@ -11,7 +11,7 @@ while ($row=mysqli_fetch_array($result))
 	}
 	if ($tell)
 	{
-		$msg="Incorrect Mail or password!!!".$_SESSION['user'];
+		$msg="Incorrect Mail or password!!!";
 		include 'index.php';
 		// echo "Incorrect user name or password";
 	}
