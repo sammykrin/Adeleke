@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bank App</title>
+<meta name="viewport" content="width=device-width" initial-scale="1.0">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="wowjs/css/libs/animate.css">
+
+
+<script type="text/javascript" src="wowjs/wow.min.js"></script>
+<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+
+<style>
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: red;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: orange;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color:  black;
+    z-index: 9999;
+    border: 0;
+    font-size: 15px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 1px;
+    border-radius: 0;
+    height: 80px;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: white !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: red !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+#xo{
+    background:url(images/cle.jpg) no-repeat center top fixed;
+    background-size: cover;
+      /*-moz-background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      width: 100%;
+      overflow: hidden;
+      height: 750px;
+      margin-top:100px;
+      margin-bottom:200px*/
+}
+.image-size{
+    position: relative;
+    max-height: 550px;
+    width: 100%;
+  }
+
+#myDIV {
+    width: 1200px;
+    height: 300px;
+    background-image: url(images/7.png);
+    
+    -webkit-animation: mymove 10s infinite; 
+    animation: mymove 10s infinite;
+}
+
+
+@-webkit-keyframes mymove {
+    25% {background-image: url(images/4.png);height: 300px}
+    50% {background-image: url(images/5.png);}
+    70% {background-image: url(images/8.png);}
+    100% {background-image: url(images/9.png);}
+}
+
+   /*   .pic{
+        width: 400px;
+        height: 217px;
+        background:url(images/15.jpg);
+      }
+      .text{
+        width: 340px;
+        height: 217px;
+        background:white;
+        opacity: 0;
+        color: black;
+      }
+      .pic:hover.text{
+        opacity: 0.6;
+        text-align: justify;
+        color: orange;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: sans-serif;
+        padding: 30px;
+      }*/
+</style>
+</head>
+<body style="font-family:  Georgia;">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#"><li class="fa fa-apple" style="font-size: 85px;margin-top: -15px;color:orangered "></li></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" style="color:white">
+      <ul class="nav navbar-nav">
+        <li><a href="home.html">HOME</a></li>
+        <div class="dropdown">
+          <ul class="dropbtn">TRANSACTION
+          <li class="dropdown-content">
+            <a href="pro.php">Savings Account</a>
+            <a href="run.php">Current Account</a>
+            </ul>
+          </li>
+        </div>
+        <li><a href="#">SERVICE</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      
+        <li><a href="loginface.php">STAFF LOG-IN</a></li>
+        <div class="dropdown">
+          <ul class="dropbtn">CUSTOMER REGISTRATION
+          <li class="dropdown-content">
+            <a href="custom.php">Creat Account</a>
+            <a href="log.php">Log-in</a>
+            </ul>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- <div class="container-fluid-fluid" style="text-align: center;background-color: #01374E;color: white">
+  <h3>OUR MOTTOR</h3> <li class="fa fa-flash"></li>
+  <h6>We walk with INTEGRETIY and with SINCERITY</h6>
+</div> -->
+
+<div id="myCarousel" class="carousel slide wow " data-ride="carousel" style="margin-top: 80px">
+
+    <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+  
+    <div class="carousel-inner" role="list box" style="font-size: 2em">
+      <div class="item active">
+       <img class="image-size" src="images/2.png">
+       <div class="carousel-caption">
+        <h1 style="margin-top:-200px;font-size: 2em;" class="text-link">Start Something that matters</h1>
+        <a href="#" class="btn btn-primary btn-large"> Learn more and start something</a>
+       </div>
+        </div>
+  
+
+      <div class="item">
+       <img class="image-size" src="images/3.png" alt="kl" style="width:100%">
+       <div class="carousel-caption">
+        <h1 style="margin-top:-200px;font-size: 2em;">Stop wasting Valuable time</h1>
+       <a href="#" class="btn btn-primary btn-large"> Work hard and acquire greetness</a>
+       </div>
+      </div>
+
+      <div class="item">
+       <img class="image-size" src="images/10.png" alt="op">
+       <div class="carousel-caption">
+       <h3 style="margin-top:-200px;font-size: 2em;">Learn more and acquire more Skills and<br> Increase your knowledge</h3>
+        <a href="#" class="btn btn-primary btn-large"> Be Skillfull</a>
+       </div>
+      </div>
+
+      <div class="item">
+       <img class="image-size" src="images/5.png" alt="gl">
+       <div class="carousel-caption">
+       <h3 style="margin-top:-200px;font-size: 2em;">Stand out and be proud of yourself</h3>
+        <a href="#" class="btn btn-primary btn-large"> Be Inspired</a>
+       </div>
+      </div>
+    
+  </div>
+  </div>
+
+  <div class="container-fluid jumbotron" style="font-family:  Georgia;" >
+    <h1 style="text-align: center; text-shadow: 2px 2px #a33322;">ABOUT OUR BANK</h1>
+    <h3 style="text-align: center;">Features of our Bank</h3>
+    <div class="col-md-3" style="text-align: center;">
+    <li class="glyphicon glyphicon-heart" style="font-size: 6em;color: black"></li><br>
+    <h3>Love</h3>
+    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.</h4>
+  </div>
+
+  <div class="col-md-3" style="text-align: center;">
+    <li class="glyphicon glyphicon-cog" style="font-size: 6em;color: black"></li><br>
+    <h3>Support</h3>
+    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.</h4>
+  </div>
+
+  <div class="col-md-3" style="text-align: center;">
+    <li class="glyphicon glyphicon-ok-circle" style="font-size: 6em;color: black"></li><br>
+    <h3>Trust</h3>
+    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.</h4>
+  </div>
+
+  <div class="col-md-3" style="text-align: center;">
+    <li class="glyphicon glyphicon-education" style="font-size: 6em;color: black"></li><br>
+    <h3>Education</h3>
+    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat.</h4>
+  </div>
+
+
+  </div>
+
+<div class="container-fluid jumbotron" style="background-color: black;margin-top: -30px;">
+   <div class="col-md-4" id="disp" style="color:white;font-size:18px"></div>
+
+  <div class="col-md-8">
+    <img src="images/16.png" style="width:100%;height:600px"> <div class="carousel-caption">
+        <h1 style="margin-top:-300px;font-size: 2em;" class="text-link">We take proper good care of our customers and we also give them adequate support each time.</h1>
+       </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" >
+  <h3 style="text-align: center;">MEET OUR STAFFS</h3>
+  <div class="col-md-3">
+    <img src="images/k.jpeg" style="width: 100%;height: 250px">
+  </div>
+
+  <div class="col-md-3">
+    <img src="images/p.jpg" style="width: 100%;height: 250px">
+  </div>
+
+  <div class="col-md-3">
+    <img src="images/f.jpeg" style="width: 100%;height: 250px">
+  </div>
+
+  <div class="col-md-3">
+    <img src="images/1.jpg" style="width: 100%;height: 250px">
+  </div>
+</div>	
+
+<div>
+  <h1 style="text-align: center;">Our Currency</h1>
+</div>
+
+<div id="myDIV" class="container"></div><br>
+
+
+<div class="container-fluid jumbotron" style="color: black">
+  <h4 style="text-align: center;">OUR MESSAGE</h4>
+  <p><em>You can also rely on us for the best services you want.BANK WITH US TODAY AND BE HAPPY TO HAVE US AS A KIND OF BANK. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
+  
+</div>
+
+<!-- <div class="pic">
+  <div class="text">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </div>
+</div> -->
+
+<div class="container-fluid" >
+  <div style="text-align:center;color:#00767E;margin-top:90px;margin-bottom:90px;" class="container-fluid wow rotateIn">
+    <h2 style="text-shadow: 2px 2px 4px #000000;text-decoration:underline;margin-top:30px">WHAT CLIENTS SAY</h2>
+
+  <div class="col-md-3">
+      <img src="images/st.jpg" style="height:300px;width: 100%">
+        <h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+
+      <div class="col-md-3">
+      <img src="images/m.jpg" style="height:300px;width: 100%">
+        <h4>"One word... WOW!!"<br><span style="font-style:normal;">John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+
+      <div class="col-md-3">
+      <img src="images/dj.jpg" style="height:300px;width: 100%">
+        <h4>"Could I... BE any more happy with this company?"<br><span style="font-style:normal;">Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
+
+      <div class="col-md-3">
+      <img src="images/n.jpeg" style="height:300px;width: 100%">
+      <h4>"You cannot be good engough to please everyone,<br><span style="font-style:normal;">focus and keep up you good work".</span></h4>
+      </div>
+
+    </div>
+    </div>
+
+
+<footer style="text-align:center;background-color: black;color:white">
+  <h4>Follow Us</h4>
+    <a href="#" class="btn-floating"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    <p>&#169; Copyright by JAYJAY</p>
+</footer>
+
+</body>
+<script>
+        document.addEventListener('DOMContentLoaded',animation,false);
+        var textArray = ["TYPEING IN PROCESS","Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor,Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor,Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodoconsequat. Duis aute irure dolor "];
+        function animation(){
+          startAnim(0);
+        }
+        function effect(currentText,i,callback){
+          if(i<currentText.length){
+            document.getElementById("disp").innerHTML = currentText.substring(0,i+1)+"<span id='cursor'></span>";
+            setTimeout(function(){effect(currentText,i+1,callback)},100);
+          }else if(typeof callback == 'function'){
+            setTimeout(callback,100); 
+          }
+        }
+        function startAnim(i){
+          if(typeof textArray[i] == 'undefined'){
+            setTimeout(function(){startAnim(0)},10000);
+          }
+          if(i<textArray.length){
+            var currentText = textArray[i];
+            effect(currentText,0,function(){
+              startAnim(i+1);
+            });
+            //startAnim(i+1);
+            
+          }
+        }
+
+    </script>
+</html>

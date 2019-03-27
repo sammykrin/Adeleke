@@ -30,3 +30,4 @@ echo "</table></div><div class='col-md-3 mt-2'><img src=../passport/".$stud['pas
 	<script type="text/javascript" src="bootstrap4/js/popper.js"></script>
 	<script type="text/javascript" src="bootstrap4/js/bootstrap.js"></script>
 </html>			
+>>>>>>> f6eba1281ef378c0255f0ce7f08bfbb2ee2cbf08

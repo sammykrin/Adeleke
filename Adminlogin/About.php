@@ -1,3 +1,6 @@
+<?php session_start(); 
+if(isset($_SESSION['user'])){
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -108,3 +111,10 @@
 
 </body>
 </html>
+<?php
+}
+else{
+    $msg='Log in here first';
+    include 'index.php';
+}
+?>

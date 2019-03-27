@@ -1,3 +1,6 @@
+<?php session_start();
+if (isset($_SESSION['user'])) {
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,10 +62,13 @@
 			padding-top: 7px;
 		}
 	</style>
-
-
-	   
-
+ <?php require 'dbcon.php';
+    $id = '';
+       $query = mysqli_query($con,"SELECT status from student_info_db where status = 'pending'");
+       $cal = mysqli_fetch_array($query);
+       $calc = $cal['status'];
+       $id += count($calc);
+?>
 
 <body >
 <nav class="navbar navbar-default m-b-0">
@@ -70,8 +76,8 @@
                 <ul class="nav navbar-top-links navbar-right pull-right">
                 	<li><img src="img/AU.jpg"></li>
                 	<li class="nav-item"><a href="http://localhost/adeleke/Adminlogin/mssg.php" class="nav-link"><span class="fa fa-envelope" id="me"></span></a></li>
-                	<li class="nav-item"><a href="http://localhost/adeleke/Adminlogin/notification.php" class="nav-link nav-brand"><span class="fa fa-bell" id="me"></span></a></li>
-                    <li class="nav-item"><a href="http://localhost/adeleke/Adminlogin/index.php" class="nav-link"><span class="fa fa-sign-out-alt" id="me"> Logout</span></a></li>
+                	<li class="nav-item"><a href="notification.php" class="nav-link nav-brand"><span class="fa fa-bell" id="me"><?php echo $id; ?></span></a></li>
+                    <li class="nav-item"><a href="logout.php" class="nav-link"><span class="fa fa-sign-out-alt" id="me"> Logout</span></a></li>
                        
                     
                 </ul>
@@ -188,3 +194,10 @@
 	<script type="text/javascript" src="bootstrap4/js/popper.js"></script>
 	<script type="text/javascript" src="bootstrap4/js/bootstrap.js"></script>
 </html>
+<?php
+}
+else{
+    $msg='Log in here first';
+    include 'index.php';
+}
+?>
