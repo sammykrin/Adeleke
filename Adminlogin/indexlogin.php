@@ -17,6 +17,6 @@ while ($row=mysqli_fetch_array($result))
 	}
 	else{
 			$_SESSION['user']=$mail;
-        include 'dashboard.php';
+        header('location:dashboard.php');
 	}
 ?>

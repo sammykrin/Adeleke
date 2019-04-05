@@ -62,12 +62,14 @@ if (isset($_SESSION['user'])) {
 			padding-top: 7px;
 		}
 	</style>
+    
  <?php require 'dbcon.php';
     $id = '';
        $query = mysqli_query($con,"SELECT status from student_info_db where status = 'pending'");
-       $cal = mysqli_fetch_array($query);
-       $calc = $cal['status'];
-       $id += count($calc);
+       while($cal = mysqli_fetch_array($query)){
+            $calc = $cal['status'];
+            $id+=1;
+       }
 ?>
 
 <body >

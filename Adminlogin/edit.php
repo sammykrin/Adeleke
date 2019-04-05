@@ -19,7 +19,7 @@ $room = $_POST['Room_NO'];
 
 $update = mysqli_query($con, "UPDATE student_info_db SET Name='$name',Course = '$course',Matric_No= '$matircno',D_O_B = '$dob',Religion_Denomination='$religion',Home_Address='$home',Email_Address='$email',Student_Phone_No='$student',Parent_Phone_No='$parent',Room_NO='$room' WHERE student_info = '$id'");
 if($update){
-	include("come.php");
+header('location:come.php');
 	}else{
 	echo mysqli_error($con);
 	}

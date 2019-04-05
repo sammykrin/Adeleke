@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 require 'dbcon.php';
 $name = $_POST['Full_Name'];
@@ -27,7 +26,7 @@ $pass = move_uploaded_file($_FILES['passport']['tmp_name'],"passport/".$passport
 $result=mysqli_query($con,"insert into student_info_db(Name,Course,Matric_No,Level,D_O_B,Religion_Denomination,Home_Address,Email_Address,Student_Phone_No,Parent_Phone_No,passport,gender,Choose_Hostel,Room_Tags,Room_NO,Bulk_Type,Bed_Type,dates,time,status)values('$name','$course','$matricno','$level','$dob','$religion','$home','$email','$student','$parent','$passport','$gender','$hostels','$tag','$room','$bulk','$beds','$dates','$settime','$status')");
 if ($result) {
 	$hostel = mysqli_query($con,"INSERT into hostel set hostel_name = '$hostels',gender = '$gender'");
-	$room = mysqli_query($con,"INSERT into room set hostel_name = '$hostels',room_name = '$tag'");
+	$insertRoom = mysqli_query($con,"INSERT into room set hostel_name = '$hostels',room_name = '$tag'");
     $bulks = mysqli_query($con,"INSERT into bunk set bunk_name = '$bulk',room_name = '$tag'");
     $all=true;
 }	
@@ -39,9 +38,10 @@ if($all){
 	 }
 	 $h=mysqli_query($con,"select * from bed where bed_type = '$beds'");
 	 while ($m=mysqli_fetch_array($h)) {
-	 	$beed=$m['bed_id'];
+	 	$beeds_id=$m['bed_id'];
+	 	echo $beeds_id;
 	 }
-	 $story = mysqli_query($con,"INSERT into bed_history set student_info = '$id',entry_date = '$dates',bed_id = '$beed'");
+	 $story = mysqli_query($con,"INSERT into bed_history set student_info = '$id',entry_date = '$dates',bed_id = '$beeds_id'");
 	if($story) {$az=true;}
 }
 if ($az) {

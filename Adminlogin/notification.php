@@ -1,5 +1,7 @@
 <?php session_start(); 
 if(isset($_SESSION['user'])){
+require 'dbcon.php';
+$empty = true;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -94,7 +96,7 @@ if(isset($_SESSION['user'])){
             
         </div>
         <?php
-         if($empty == false){
+         if(true){
         ?>
         <div class="col-md-12 mt-5">
         <div id="main">
@@ -108,8 +110,7 @@ if(isset($_SESSION['user'])){
                             <th>Action</th>
                     </thead>
                             <tbody>
-    <?php require 'dbcon.php';
-        $empty = true;
+    <?php 
             $query = mysqli_query($con,"SELECT * from student_info_db where status = 'pending'");
             while($data=mysqli_fetch_array($query)){
                 if(!empty($data)){
