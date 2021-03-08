@@ -1,3 +1,20 @@
+<?php session_start();
+require 'dbcon.php';
+$query = mysqli_query($con, "SELECT * from student_info_db where '$_SESSION[matricno]'");
+$row = mysqli_fetch_array($query);
+if($row['status']){$pending = true;}
+	$pending = true;
+	$course = $row['Course'];
+	$matric = $row['Matric_No'];
+	$level = $row['Level'];
+	$dob = $row['D_O_B'];
+	$religion = $row['Religion_Denomination'];
+	$homeAdd = $row['Home_Address'];
+	$email = $row['Email_Address'];
+	$sphone = $row['Student_Phone_No'];
+	$pphone = $row['Parent_Phone_No'];
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,37 +91,37 @@
 
 <!-- One "tab" for each step in the form: -->
 <div class="tab">
-  <p><input type="text" name="Full_Name" required="true" placeholder="Name..." oninput="this.className = ''"></p>
+ <!--  <p><input type="text" name="Full_Name" required="true" placeholder="Name..." oninput="this.className = ''"></p> -->
   <p><input type="text" name="Course" required="true" placeholder="Course..." oninput="this.className = ''"></p>
-  <p><input type="text" name="Matric_No" required="true" placeholder="Matric_No..." oninput="this.className = ''"></p>
+  <!-- <p><input type="text" name="Matric_No" required="true" placeholder="Matric_No..." oninput="this.className = ''"></p> -->
+  <p><input type="text" name="Level" required="true" placeholder="Level..." oninput="this.className = ''"></p>
  
 </div>
 	
 <div class="tab">
-	<p><input type="text" name="Level" required="true" placeholder="Level..." oninput="this.className = ''"></p>
-  <p><input type="text" name="DOB" required="true" placeholder="DOB..." oninput="this.className = ''"></p>
+  <p><input type="date" name="D_O_B" required="true" placeholder="Date of birth..." oninput="this.className = ''"></p>
   <p><input type="text" name="Religion/Denomination" required="true" placeholder="Religion~Denomination..." oninput="this.className = ''"></p>
 </div>
 
 <div class="tab">
   <p><input type="text" name="Home_Address"  placeholder="Home~Addres..." required="true" oninput="this.className = ''"></p>
-  <p><input type="email" name="Email_Address" placeholder="Email~Address..."  required="true" oninput="this.className = ''"></p>
+  <!-- <p><input type="email" name="Email_Address" placeholder="Email~Address..."  required="true" oninput="this.className = ''"></p> -->
   <p><input type="text" name="Student_Phone_No" placeholder="Student~Phone~No..."   required="true"  oninput="this.className = ''"></p>
 </div>
 
 <div class="tab">
   <p><input type="text" name="Parent_Phone_No" placeholder="Parent~Phone~No..."  required="true" oninput="this.className = ''"></p>
   <p><input type="file" name="passport" placeholder="Passport..." required="true" oninput="this.className = ''"></p>
-  <p><input type="radio" name="radio" value="male"
+ <!--  <p><input type="radio" name="radio" value="male"
   oninput="this.className = ''">male</p>
    <p><input type="radio" name="radio" value="female"
   oninput="this.className = ''">female</p>
-
+ -->
 
   <label>Choose-Hostel</label>
 		<select oninput="this.className = ''" name="hostel" required="true">
-			<option value="Samuel Hostel">Samuel</option>
-			<option value="Biosla Hostel">Bisola</option>
+			<option value="Male Hostel">Male</option>
+			<option value="Female Hostel">Female</option>
 		</select><br>
 		<label>Room-Tags</label>
 										<select oninput="this.className = ''" name="room" required="true">
@@ -164,10 +181,7 @@
 										</select>
 
 
-</div>
-
-
-	
+</div>	
 <div style="overflow:auto;">
   <div style="float:right;">
     <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>

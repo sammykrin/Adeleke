@@ -68,7 +68,7 @@
                                                     </div>
                         <button type="submit" class="btn btn-warning block full-width m-b">Login</button>
 
-                        <a href="https://myportal.kwasu.edu.ng/password/reset">
+                        <a href="#">
                             <small>Forgot password?</small>
                         </a>
 

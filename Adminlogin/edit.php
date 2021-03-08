@@ -15,8 +15,6 @@ $email = $_POST['Email_Address'];
 $student = $_POST['Student_Phone_No'];
 $parent = $_POST['Parent_Phone_No'];
 $room = $_POST['Room_NO'];
-
-
 $update = mysqli_query($con, "UPDATE student_info_db SET Name='$name',Course = '$course',Matric_No= '$matircno',D_O_B = '$dob',Religion_Denomination='$religion',Home_Address='$home',Email_Address='$email',Student_Phone_No='$student',Parent_Phone_No='$parent',Room_NO='$room' WHERE student_info = '$id'");
 if($update){
 header('location:come.php');
@@ -30,6 +28,9 @@ $select = mysqli_query($con, "select * from student_info_db where student_info =
 if($select){
 while($row=mysqli_fetch_array($select)){
  ?>
+ <head>
+ 	<link rel="icon" href="./testing/AU.jpg" type="image/png">
+ </head>
  
 		<html>
 		<head><tittle>Edit</tittle></head>
@@ -80,7 +81,7 @@ while($row=mysqli_fetch_array($select)){
 <?php
 }
 else{
-    $msg='Log in here first';
+    $msg='Login here first';
     include 'index.php';
 }
 ?>

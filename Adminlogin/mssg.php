@@ -4,6 +4,7 @@ if(isset($_SESSION['user'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="./testing/AU.jpg" type="image/png">
     <title>Inbox</title>
     <link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
     <meta charset="utf-8">
@@ -46,7 +47,7 @@ if(isset($_SESSION['user'])){
 <?php
 }
 else{
-    $msg='Log in here first';
+    $msg='Login here first';
     include 'index.php';
 }
 ?>

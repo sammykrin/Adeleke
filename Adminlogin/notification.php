@@ -6,7 +6,8 @@ $empty = true;
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Notificatio</title>
+    <link rel="icon" href="./testing/AU.jpg" type="image/png">
+    <title>Notification</title>
     <link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,6 +87,10 @@ $empty = true;
                         <a href="come.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-globe " aria-hidden="true"></i> Student-info</a>
                     </li>
 
+                      <li>
+                        <a href="http://localhost/adeleke/Adminlogin/addhostel.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-address-book " aria-hidden="true"></i> New-Hostel</a>
+                    </li>
+
                     <li>
                         <a href="404.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-info-circle " aria-hidden="true"></i> Error 404</a>
                     </li>
@@ -104,7 +109,7 @@ $empty = true;
                         <thead>
                         
                             <th>Name</th>
-                            <th>Gender</th>
+                            <!-- <th>Gender</th> -->
                             <th>Course</th>
                             <th>Matric-No</th>
                             <th>Action</th>
@@ -116,10 +121,10 @@ $empty = true;
                 if(!empty($data)){
                 $empty = false;
                 echo "<tr><td>".$data['Name']."</td>";
-                echo "<td>".$data['gender']."</td>";
+                // echo "<td>".$data['gender']."</td>";
                 echo "<td>".$data['Course']."</td>";
                 echo "<td>".$data['Matric_No']."</td>";
-                echo "<td><a href=accept.php?id=".$data['student_info'].">Accept</a></td>";
+                echo "<td><button class='btn btn-sm btn-success'><a href=accept.php?id=".$data['student_info'].">Accept</a></button></td>";
                 echo "</tr>";
                 }
             }
@@ -157,7 +162,7 @@ $empty = true;
 <?php
 }
 else{
-    $msg='Log in here first';
+    $msg='Login here first';
     include 'index.php';
 }
 ?>

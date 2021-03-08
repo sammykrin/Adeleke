@@ -7,6 +7,7 @@ if(isset($_SESSION['user'])){
 	<title>About AU</title>
 	<meta charset="utf-8">
     <title>About</title>
+    <link rel="icon" href="./testing/AU.jpg" type="image/png">
 	<meta name="viewport" content="width=device-width initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
     <link href="bootstrap4/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -57,13 +58,18 @@ if(isset($_SESSION['user'])){
                         <a href="http://localhost/class/php/custolist.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-user" aria-hidden="true"></i> Profile</a>
                     </li>
                    
-                    <li>
+                   <!--  <li>
                         <a href="http://localhost/adeleke/Adminlogin/About.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-font" aria-hidden="true"></i> About</a>
                     </li>
-
+ -->
                     <li>
                         <a href="http://localhost/adeleke/Adminlogin/come.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-globe " aria-hidden="true"></i> Student-info</a>
                     </li>
+
+                     <li>
+                        <a href="http://localhost/adeleke/Adminlogin/addhostel.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-address-book " aria-hidden="true"></i> New-Hostel</a>
+                    </li>
+
 
                     <li>
                         <a href="http://localhost/adeleke/Adminlogin/404.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-info-circle " aria-hidden="true"></i> Error 404</a>
@@ -114,7 +120,7 @@ if(isset($_SESSION['user'])){
 <?php
 }
 else{
-    $msg='Log in here first';
+    $msg='Login here first';
     include 'index.php';
 }
 ?>

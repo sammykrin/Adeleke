@@ -32,6 +32,7 @@ if (isset($_SESSION['user'])) {
     <link href="css/colors/default.css" id="theme" rel="stylesheet">
     
 	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+    <link rel="icon" href="./testing/AU.jpg" type="image/png">
 	<link rel="stylesheet" type="text/css" href="wowjs/css/libs/animate.css">
 	<script type="text/javascript" src="wowjs/dist/wow.min.js"></script>
 	<script type="text/javascript">
@@ -108,6 +109,10 @@ if (isset($_SESSION['user'])) {
 
                     <li>
                         <a href="http://localhost/adeleke/Adminlogin/come.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-globe " aria-hidden="true"></i> Student-info</a>
+                    </li>
+
+                    <li>
+                        <a href="http://localhost/adeleke/Adminlogin/addhostel.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-address-book " aria-hidden="true"></i> New-Hostel</a>
                     </li>
 
                     <li>
@@ -199,7 +204,7 @@ if (isset($_SESSION['user'])) {
 <?php
 }
 else{
-    $msg='Log in here first';
+    $msg='Login here first';
     include 'index.php';
 }
 ?>

@@ -1,13 +1,13 @@
-<?php session_start();
+<?php
 require 'dbcon.php';
-$name = $_SESSION['fullname'];
+$name = $_POST['Full_Name'];
 $course = $_POST['Course'];
-$matricno = $_SESSION['matricno'];
+$matricno = $_POST['Matric_No'];
 $level = $_POST['Level'];
-$dob = $_POST['D_O_B'];
+$dob = $_POST['DOB'];
 $religion = $_POST['Religion/Denomination'];
 $home = $_POST['Home_Address'];
-$email = $_SESSION['email'];
+$email = $_POST['Email_Address'];
 $student = $_POST['Student_Phone_No'];
 $parent = $_POST['Parent_Phone_No'];
 $passport = $_FILES['passport']['name'];
@@ -23,7 +23,7 @@ $dates = date("d/m/y");
 $settime = date("h:m:sa");
 $status = 'pending';
 $pass = move_uploaded_file($_FILES['passport']['tmp_name'],"passport/".$passport);
-$result=mysqli_query($con,"insert into student_info_db(Name,Course,Matric_No,Level,D_O_B,Religion_Denomination,Home_Address,Email_Address,Student_Phone_No,Parent_Phone_No,passport,Choose_Hostel,Room_Tags,Room_NO,Bunk_Type,Bed_Type,dates,time,status)values('$name','$course','$matricno','$level','$dob','$religion','$home','$email','$student','$parent','$passport','$hostels','$tag','$room','$bulk','$beds','$dates','$settime','$status')");
+$result=mysqli_query($con,"insert into student_info_db(Name,Course,Matric_No,Level,D_O_B,Religion_Denomination,Home_Address,Email_Address,Student_Phone_No,Parent_Phone_No,passport,Choose_Hostel,Room_Tags,Room_NO,Bulk_Type,Bed_Type,dates,time,status)values('$name','$course','$matricno','$level','$dob','$religion','$home','$email','$student','$parent','$passport','$hostels','$tag','$room','$bulk','$beds','$dates','$settime','$status')");
 if ($result) {
 	$hostel = mysqli_query($con,"INSERT into hostel set hostel_name = '$hostels'");
 	$insertRoom = mysqli_query($con,"INSERT into room set hostel_name = '$hostels',room_name = '$tag'");
@@ -37,9 +37,10 @@ if($all){
 	 	$id = $b['student_info'];
 	 }
 	 $h=mysqli_query($con,"select * from bed where bed_type = '$beds'");
-	 $m=mysqli_fetch_array($h);
+	 while ($m=mysqli_fetch_array($h)) {
 	 	$beeds_id=$m['bed_id'];
 	 	echo $beeds_id;
+	 }
 	 $story = mysqli_query($con,"INSERT into bed_history set student_info = '$id',entry_date = '$dates',bed_id = '$beeds_id'");
 	if($story) {$az=true;}
 }
@@ -48,15 +49,4 @@ print("Reg complete"." ".$name."".""."Your room no is".$room."");
 }
 else{echo mysqli_error($con);}
 
-// if ($gender=='male'){
-// 	$result=mysqli_query($con,"insert into male_db(Name,Course,Matric_No,Level,D_O_B,Religion_Denomination,Home_Address,Email_Address,Student_Phone_No,Parent_Phone_No,passport,gender)values('$name','$course','$matricno','$level','$dob','$religion','$home','$email','$student','$parent','$passport','$gender')");}
-
-// 	else if ($gender=='female'){
-// 	$result=mysqli_query($con,"insert into female_db(Name,Course,Matric_No,Level,D_O_B,Religion_Denomination,Home_Address,Email_Address,Student_Phone_No,Parent_Phone_No,passport,gender)values('$name','$course','$matricno','$level','$dob','$religion','$home','$email','$student','$parent','$passport','$gender')");}
-
-// echo $gender;
-
-?>
-<head>
-	<link rel="icon" href="./testing/AU.jpg" type="image/png">
-</head>
+ ?>

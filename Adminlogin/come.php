@@ -10,6 +10,7 @@ $show=mysqli_query($con,"select * from student_info_db");
 <html>
 <head>
 	<title>Students-Info</title>
+	<link rel="icon" href="./testing/AU.jpg" type="image/png">
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -97,9 +98,14 @@ $show=mysqli_query($con,"select * from student_info_db");
                         <a href="http://localhost/adeleke/Adminlogin/About.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-font" aria-hidden="true"></i> About</a>
                     </li>
 
-                    <li>
+                  <!--   <li>
                         <a href="http://localhost/adeleke/Adminlogin/come.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-globe " aria-hidden="true"></i> Student-info</a>
                     </li>
+ -->
+                     <li>
+                        <a href="http://localhost/adeleke/Adminlogin/addhostel.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-address-book " aria-hidden="true"></i> New-Hostel</a>
+                    </li>
+
 
                     <li>
                         <a href="http://localhost/adeleke/Adminlogin/404.php" class="waves-effect" style="text-decoration: none;"><i class="fa fa-info-circle " aria-hidden="true"></i> Error 404</a>
@@ -125,7 +131,7 @@ $show=mysqli_query($con,"select * from student_info_db");
 							<th>Matric-No</th>
 							<th>Level</th>
 							<th>Email-Address</th>
-							<th>Gender</th>
+							<!-- <th>Gender</th> -->
 							<th>More-Details</th>
 					
 					</thead>
@@ -151,7 +157,7 @@ $show=mysqli_query($con,"select * from student_info_db");
           $.post("json.php",{input:ins},function(take){all=JSON.parse(take);
             for(i=0;i<all.length;i++){
             	ids=all[i].student_info;
-            	put+="<tr><td>"+all[i].Name+"</td><td>"+all[i].Course+"</td><td>"+all[i].Matric_No+"</td><td>"+all[i].Level+"</td><td>"+all[i].Email_Address+"</td><td>"+all[i].gender+"</td><td><button class='btn btn-sm btn-info'><a style='text-decoration:none;color:white;' href='more.php?id="+ids+"'>More</button></td></tr>";
+            	put+="<tr><td>"+all[i].Name+"</td><td>"+all[i].Course+"</td><td>"+all[i].Matric_No+"</td><td>"+all[i].Level+"</td><td>"+all[i].Email_Address+"</td><td><button style ='margin-left:26%' class='btn btn-sm btn-info'><a style='text-decoration:none;color:white;' href='more.php?id="+ids+"'>More</button></td></tr>";
             }
             $('tbody').html(put);
           });
@@ -179,7 +185,7 @@ $show=mysqli_query($con,"select * from student_info_db");
 <?php
 }
 else{
-    $msg='Log in here first';
+    $msg='Login here first';
     include 'index.php';
 }
 ?>

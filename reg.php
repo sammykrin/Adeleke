@@ -31,16 +31,29 @@
 						<div class="col-md-12">
 							<div class="col-md-12">
 								<div class="form-group">
-									<label for="name">Name</label>
+									<label for="name">Firstame</label>
 									<div class="input-group">
 										<span class="input-group-addon">
 											<span class="fa fa-user"></span>											
 										</span>
-										<input type="text" name="name" class="form-control" required="true" name="name">
+										<input type="text" name="fname" class="form-control" required="true" name="name">
 									</div>
 								</div>
 								
 							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<label for="name">Surname</label>
+									<div class="input-group">
+										<span class="input-group-addon">
+											<span class="fa fa-user"></span>											
+										</span>
+										<input type="text" name="sname" class="form-control" required="true" name="name">
+									</div>
+								</div>
+								
+							</div>
+							
 
 							<div class="col-md-12">
 								<div class="form-group">
